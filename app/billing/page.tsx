@@ -5,8 +5,8 @@ import { useState } from 'react';
 export default function HomePage() {
   const [showEditPopup, setShowEditPopup] = useState(false);
 
-  const handleOutsideClick = (e) => {
-    if (e.target.id === 'popup-overlay') {
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).id === 'popup-overlay') {
       setShowEditPopup(false);
     }
   };

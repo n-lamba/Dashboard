@@ -10,12 +10,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-  const handleOutsideClick = (e) => {
-    if (e.target.id === 'sidebar-overlay') {
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).id  === 'sidebar-overlay') {
       setSidebarOpen(false);
     }
-  };
-
+  }; 
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
