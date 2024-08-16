@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 }
+/* app/globals.css */
+
+body {
+  @apply font-sans;
+}
+
+ul {
+  @apply list-none p-0 m-0;
+}
+
+a {
+  @apply no-underline text-gray-800;
+}
+
+a.active {
+  @apply font-bold text-blue-500;
+}
